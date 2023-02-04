@@ -1,4 +1,9 @@
 import './globals.css'
+import { Inter } from '@next/font/google'
+import Link from 'next/link'
+import Footer from './components/footer'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
@@ -7,12 +12,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body className={inter.className}>
+        <main>
+          <Link href='/'>
+            <h1>TD</h1>
+          </Link>
+          {children}
+          <Footer />
+        </main>
+      </body>
     </html>
   )
 }
