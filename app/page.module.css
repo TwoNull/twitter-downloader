@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  text-align: center;
 }
 
 .linkinput {
@@ -46,6 +47,7 @@
   font-size: 1.4rem;
   line-height: 2.4rem;
   vertical-align: middle;
+  min-width: 0;
 }
 .linkinput input::-webkit-input-placeholder {
   color: rgba(180, 180, 180, 0.8);

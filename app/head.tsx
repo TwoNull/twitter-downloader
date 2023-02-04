@@ -1,8 +1,9 @@
 export default function Head() {
   return (
     <>
-      <title>TD</title>
-      <meta name="description" content="A Minimalist Twitter Video Downloader" />
+      <title>TD | Dark²</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta name="description" content="A minimalist Twitter video downloader" />
       <link rel="icon" href="/favicon.ico" />
     </>
   )

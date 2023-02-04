@@ -9,11 +9,11 @@ export default function Links({links, duration}: any) {
         const url = new URL(links[link].url)
         const paths = url.pathname.split('/')
         const res = paths[paths.length-2]
-        if(duration * (links[link].bitrate/8000) < 10000000) {
+        if(duration * (links[link].bitrate/8000) < 12000000) {
             list.push(<a href={`/api/proxy?link=${url.href}`}><span>{res + ' | ' + formatBytes(duration * (links[link].bitrate/8000))}</span></a>)
         }
         else {
-            list.push(<a href={url.href} target="_blank" rel="noopener noreferrer"><span>{res + ' | Source (Over 10MB Download Limit)'}</span></a>)
+            list.push(<a href={url.href} target="_blank" rel="noopener noreferrer"><span>{res + ' | Source (Over 12MB)'}</span></a>)
         }
     }
     return list;

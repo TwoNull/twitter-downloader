@@ -34,7 +34,7 @@ export default async function handler(
 
   export const config = {
     api: {
-      responseLimit: '11mb',
+      responseLimit: '12mb',
     },
   }
   

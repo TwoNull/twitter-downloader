@@ -24,6 +24,11 @@ export default function Home() {
     }
   }
 
+  if (typeof window != "undefined") {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+
   return (
     <div className={styles.content}>
       <p>Paste a Twitter video link below to download.</p>
