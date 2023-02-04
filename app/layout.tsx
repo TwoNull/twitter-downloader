@@ -1,21 +1,21 @@
-import './globals.css'
-import { Inter } from '@next/font/google'
-import Link from 'next/link'
-import Footer from './components/footer'
+import "./globals.css";
+import { Inter } from "@next/font/google";
+import Link from "next/link";
+import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <head />
       <body className={inter.className}>
         <main>
-          <Link href='/'>
+          <Link href="/">
             <h1>TD</h1>
           </Link>
           {children}
@@ -23,5 +23,5 @@ export default function RootLayout({
         </main>
       </body>
     </html>
-  )
+  );
 }

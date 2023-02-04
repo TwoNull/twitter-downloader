@@ -1,26 +1,24 @@
-"use client"
+"use client";
 
-import { useRouter } from 'next/navigation';
-import styles from './page.module.css'
+import { useRouter } from "next/navigation";
+import styles from "./page.module.css";
 
 export default function Home() {
   const router = useRouter();
-  
+
   function handleSubmit(event: any) {
-    event.preventDefault()
+    event.preventDefault();
     try {
-      const url = new URL(event.target.query.value)
-      const tweetpath = url.pathname.split('/')
-      const id = tweetpath[tweetpath.length-1]
-      if(!Number.isNaN(Number(id))) {
-        router.push(`/media/${id}`)
+      const url = new URL(event.target.query.value);
+      const tweetpath = url.pathname.split("/");
+      const id = tweetpath[tweetpath.length - 1];
+      if (!Number.isNaN(Number(id))) {
+        router.push(`/media/${id}`);
+      } else {
+        throw "not tweet";
       }
-      else {
-        throw 'not tweet'
-      }
-    }
-    catch {
-      alert('URL is not a tweet.')
+    } catch {
+      alert("URL is not a tweet.");
     }
   }
 
@@ -42,5 +40,5 @@ export default function Home() {
         <button type="submit">&#x21E8;</button>
       </form>
     </div>
-  )
+  );
 }
