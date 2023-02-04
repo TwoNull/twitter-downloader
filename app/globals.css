@@ -27,7 +27,6 @@ body {
   background: rgb(240, 240, 240);
   transition: height 140ms ease;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 main {
