@@ -22,9 +22,10 @@ export default async function handler(
     });
     const contentType = response.headers["content-type"];
     const contentLength = response.headers["content-length"];
+    const date = new Date()
     res.setHeader(
       "Content-Disposition",
-      "attachment; filename=td_download.mp4"
+      `attachment; filename=td_${(((date.getMonth()+1) < 10)?"0":"") + (date.getMonth()+1) +""+ ((date.getDate() < 10)?"0":"") + date.getDate() +""+ date.getFullYear().toString().slice(-2) + "_" + ((date.getHours() < 10)?"0":"") + date.getHours() +""+ ((date.getMinutes() < 10)?"0":"") + date.getMinutes() +""+ ((date.getSeconds() < 10)?"0":"") + date.getSeconds()}.mp4`
     );
     res.setHeader("Content-Type", contentType);
     res.setHeader("Content-Length", contentLength);
