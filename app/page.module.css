@@ -8,7 +8,7 @@
 }
 
 .loading:after {
-  background: linear-gradient(270deg, #00cc00, rgba(0, 204, 0, 0.1), #00cc00);
+  background: linear-gradient(270deg, rgb(220,220,220), rgb(140,140,140), rgb(220,220,220));
   background-size: 400% 400%;
 
   -webkit-animation: animation 5s ease infinite;
@@ -21,4 +21,8 @@
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:200% 50%}
+}
+
+.loading button {
+  display: none;
 }
