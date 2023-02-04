@@ -1,10 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false)
 
   function handleSubmit(event: any) {
     event.preventDefault();
@@ -14,6 +16,7 @@ export default function Home() {
       const id = tweetpath[tweetpath.length - 1];
       if (!Number.isNaN(Number(id))) {
         router.push(`/media/${id}`);
+        setLoading(true)
       } else {
         throw "not tweet";
       }
@@ -30,7 +33,7 @@ export default function Home() {
   return (
     <div className={styles.content}>
       <p>Paste a Twitter video link below to download.</p>
-      <form className={styles.linkinput} onSubmit={handleSubmit}>
+      <form className={loading ? styles.loading : undefined} onSubmit={handleSubmit}>
         <input
           autoComplete="off"
           type="text"

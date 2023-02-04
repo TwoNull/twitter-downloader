@@ -7,63 +7,18 @@
   text-align: center;
 }
 
-.linkinput {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: 6px;
-  padding: 0.7rem 0.8rem 0.8rem;
-  background: rgba(245, 245, 245, 1);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.loading:after {
+  background: linear-gradient(270deg, #00cc00, rgba(0, 204, 0, 0.1), #00cc00);
+  background-size: 400% 400%;
+
+  -webkit-animation: animation 5s ease infinite;
+  -moz-animation: animation 5s ease infinite;
+  animation: animation 5s ease infinite;
+  opacity: 1;
 }
 
-.linkinput:after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 999;
-  height: 6px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  background-position: 0% 0%;
-  background: #1da1f2;
-  opacity: 0.3;
-  transition: opacity 200ms ease;
-}
-
-.linkinput:has(input:focus):after {
-  opacity: 0.7;
-  transition: opacity 200ms ease;
-}
-
-.linkinput input {
-  flex-grow: 1;
-  color: rgba(26, 26, 26, 1);
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  vertical-align: middle;
-  min-width: 0;
-}
-.linkinput input::-webkit-input-placeholder {
-  color: rgba(180, 180, 180, 0.8);
-}
-
-.linkinput button {
-  color: #1da1f2;
-  margin-left: 12px;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-  vertical-align: middle;
-  opacity: 0.3;
-  transition: opacity 0.25s;
-}
-
-.linkinput button:hover {
-  opacity: 0.7;
-  cursor: pointer;
+@keyframes animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:200% 50%}
 }
