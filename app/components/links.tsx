@@ -1,5 +1,3 @@
-import styles from './links.module.css'
-
 export default function Links({links, duration}: any) {
     links = links.sort(function(a: any, b: any) {
         return a.bitrate - b.bitrate
