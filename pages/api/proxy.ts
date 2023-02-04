@@ -22,7 +22,7 @@ export default async function handler(
       })
       const contentType = response.headers['content-type']
       const contentLength = response.headers['content-length']
-      res.setHeader('Content-Disposition', 'attachment; filename=td_dl.mp4')
+      res.setHeader('Content-Disposition', 'attachment; filename=td_download.mp4')
       res.setHeader('Content-Type', contentType)
       res.setHeader('Content-Length', contentLength)
       return res.status(200).send(response.data)
