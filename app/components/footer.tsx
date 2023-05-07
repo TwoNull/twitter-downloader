@@ -3,8 +3,8 @@ export default function Footer() {
     <div>
       <p>
         Made with &#128153; by{" "}
-        <a href="https://github.com/0xDarkTwo">
-          <span>0xDarkTwo</span>
+        <a href="https://github.com/twonull">
+          <span>TwoNull</span>
         </a>
         .
       </p>
