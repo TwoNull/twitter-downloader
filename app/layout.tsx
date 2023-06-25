@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main>
           <Link href="/">
-            <h1>TD</h1>
+            <h1>Twitter Downloader</h1>
           </Link>
           {children}
           <Footer />

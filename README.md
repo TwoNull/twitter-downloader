@@ -1,5 +1,7 @@
-## TD
+## Twitter Downloader
 
 # Minimalist Twitter Video Downloader
 
-> Shoutout Vercel Serverless Functions | [td.dark2.co](https://td.dark2.co)
+This is a simple Twitter video downloader web app utilizing serverless functions and Tweetdeck endpoints to access source MP4s.
+
+Hosted at [twitter.nullptrs.co](https://twitter.nullptrs.co)
